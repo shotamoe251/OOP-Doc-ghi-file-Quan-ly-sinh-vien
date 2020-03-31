@@ -1,0 +1,32 @@
+Xây dựng chương trình quản lý sinh viên – Đọc ghi file thông tin sinh viên và tính điểm trung bình.
+Chương trình lưu dưới tên QLSV.exe
+File dữ liệu chứa danh sách các sinh viên và điểm (toán, văn, anh) của họ
+Format: MSSV|Họ tên|Điểm toán|Điểm văn|Điểm anh
+Tham khảo file dữ liệu DATA.txt trong uploaded file
+
+Từ terminal, khi nhập:
+•       ./QLSV.exe add <file.txt>
+Ví dụ: ./QLSV.exe add DATA.txt
+            +) Thực hiện ghi vào file DSSV.txt
+                        Với format: MSSV|Họ tên|Điểm toán|Điểm văn|Điểm anh|Điểm trung bình
+                        ví dụ:
+                          19A7304|Nguyen Van A|9.0|4.2|7.5|6.9
+                          17E2709|Tran Thi B|6.4|2.5|5.0|4.6333 
++) Đồng thời in ra màn hình terminal "Successed!" nếu ghi thành công vào file DSSV.txt, ngược lại: "Failed!"
+
+•       ./QLSV.exe find <MSSV> hoặc ./QLSV.exe find <Họ tên>
+            +) In ra màn hình terminal (các) dòng thông tin cá nhân và điểm (bao gồm điểm TB) của sinh viên tìm kiếm tương ứng
+      với format: STT. MSSV|Họ tên|Điểm toán|Điểm văn|Điểm anh|Điểm trung bình
+ví dụ: ./QLSV.exe find 23B2135
+                                    >>>>> 1. 23B2135|Le Ngoc X|3.4|7.8|10|7.0666
+                        ví dụ: ./QLSV find "Nguyen Van A"
+                                    >>>>> 1. 15A0981|Nguyen Van A|6.2|9.8|7.3|7.766666
+                                                  2. 17C6517|Nguyen Van A|2.3|8.0|4.5|4.93333
+
+•       ./QLSV.exe passed
++) In ra màn hình terminal các dòng thông tin cá nhân và điểm (bao gồm điểm TB) của sinh viên có điểm TB trên 5
+            với format: STT. MSSV|Họ tên|Điểm toán|Điểm văn|Điểm anh|Điểm trung bình
+                        ví dụ: ./QLSV.exe passed
+                                    >>>> 1. 19A7304|Nguyen Van A|9.0|4.2|7.5
+                                               2. 23B2135|Le Ngoc X|3.4|7.8|10|7.0666
+                                              3. 15A0981|Nguyen Van A|6.2|9.8|7.3|7.766666
